@@ -6,16 +6,10 @@ namespace Library
 {
     public class Node
     {
-        private int number;
 
+        private Persona persona;
+        public Persona Persona {get;}
         private List<Node> children = new List<Node>();
-
-        public int Number {
-            get
-            {
-                return this.number;
-            }
-        }
 
         public ReadOnlyCollection<Node> Children { 
             get
@@ -24,9 +18,9 @@ namespace Library
             }
         }
 
-        public Node(int number)
+        public Node(Persona persona)
         {
-            this.number = number;
+            this.persona = persona;
         }
 
         public void AddChildren(Node n)
